@@ -1,0 +1,4 @@
+#ignore
+/angular-ui/*.md
+/angular-ui/package-lock.json
+/angular-ui/node_modules

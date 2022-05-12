@@ -1,0 +1,19 @@
+<div>
+    <table class="product-table">
+      <td class="product-details"> 
+        <div>
+            <h4>Product name: {{ product.name }}</h4>  
+            <h5>Product id: {{ product.id }}</h5>
+            <p>Price: {{ product.price.amount | currency:product.price.currency }}</p>
+        </div> 
+      </td>
+      <td class="product-image">
+          <div>
+              <img src="../../assets/img/{{ product.name }}_officeGuy.jpg" height="225px">
+          </div>  
+      </td>
+      <td class="buy-button">
+        <button (click)="buyNow()">BuyNow</button>
+      </td>
+    </table>
+</div>

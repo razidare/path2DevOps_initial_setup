@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  productapi:
+    image: barbart/productapi:0.1
+    restart: always
+    ports:
+      - "8080:8080"
+  cartapi:
+    image: barbart/cartapi:0.1
+    restart: always
+    ports:
+      - "8081:8080"
+  frontend:
+    image: barbart/frontend:0.1
+    restart: always
+    ports:
+      - "9090:8080"

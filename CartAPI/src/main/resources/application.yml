@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: <mysql-db-url>
+    username: <mysql-db-username>
+    password: <mysql-db-password>
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: @server.port@

@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="app-wrapper">
+  <div class="app-header">
+    <h2 id="welcome-message">Welcome to barbART</h2>
+    <a id="logo">
+      <img src="assets/img/logo.jpg" height="100px">
+    </a>
+  </div>
+  <span *ngIf="products.length == 0">Loading...</span>
+  <div *ngFor="let product of products">
+    <app-product-panel [product]="product"></app-product-panel>
+  </div>
+</div>
+
