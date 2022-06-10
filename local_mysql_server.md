@@ -54,3 +54,4 @@ select host, user from mysql.user;
 docker restart mysql
 ```
 4. Connect to your local MySQL server using MySQL Workbench
+5. Execute [this](https://github.com/razidare/path2DevOps_initial_setup/blob/main/product_table_query.sql) query in order to create the database&table
