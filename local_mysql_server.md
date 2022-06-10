@@ -4,12 +4,12 @@
 1. Install Rancher Desktop from [HERE](https://rancherdesktop.io/)
 Make sure to configure Rancher Desktop to use Docker cli
 2. Run MySQL server as a container
-The MySQL Official [repo](https://hub.docker.com/r/mysql/mysql-server) also presents instructions, but I prefer this command:
+The MySQL Official [REPO](https://hub.docker.com/r/mysql/mysql-server) also presents instructions, but I prefer this command:
 ```
 docker run --name=mysql --restart unless-stopped -p 3306:3306 -d mysql/mysql-server:5.7
 ```
 3. Configure MySQL container to accept connections from any IP address
-[This](https://stackoverflow.com/questions/33827342/how-to-connect-mysql-workbench-to-running-mysql-inside-docker) Stack Overflow article explains how to do it, but I will summarize the commands here for you:
+[THIS](https://stackoverflow.com/questions/33827342/how-to-connect-mysql-workbench-to-running-mysql-inside-docker) Stack Overflow article explains how to do it, but I will summarize the commands here for you:
 ```
 #grab the default password from the container logs
 docker logs mysql 2>&1 | grep GENERATED
@@ -53,5 +53,5 @@ select host, user from mysql.user;
 #restart docker container
 docker restart mysql
 ```
-4. Connect to your local MySQL server using MySQL Workbench
-5. Execute [this](https://github.com/razidare/path2DevOps_initial_setup/blob/main/product_table_query.sql) query in order to create the database&table
+4. Connect to your local MySQL server using MySQL Workbench (download it from [HERE](https://dev.mysql.com/downloads/workbench/))
+5. Execute [THIS](https://github.com/razidare/path2DevOps_initial_setup/blob/main/product_table_query.sql) query in order to create the database&table
