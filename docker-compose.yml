@@ -2,11 +2,19 @@ version: "3"
 
 services:
   productapi:
+    environment:
+      - SPRING_DATASOURCE_PASSWORD=${SPRING_DATASOURCE_PASSWORD}
+      - SPRING_DATASOURCE_URL=${SPRING_DATASOURCE_URL}
+      - SPRING_DATASOURCE_USERNAME=${SPRING_DATASOURCE_USERNAME}
     image: barbart/productapi:0.1
     restart: always
     ports:
       - "8080:8080"
   cartapi:
+    environment:
+      - SPRING_DATASOURCE_PASSWORD=${SPRING_DATASOURCE_PASSWORD}
+      - SPRING_DATASOURCE_URL=${SPRING_DATASOURCE_URL}
+      - SPRING_DATASOURCE_USERNAME=${SPRING_DATASOURCE_USERNAME}
     image: barbart/cartapi:0.1
     restart: always
     ports:
